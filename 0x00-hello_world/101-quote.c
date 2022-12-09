@@ -6,7 +6,7 @@
  *
  * Description: prints quote from Dora's Korpar
  *
- * Return: Always 1 (Success)
+ * Return: Failed 1 (Failure)
  */
 int main(void)
 {
