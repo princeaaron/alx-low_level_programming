@@ -1,4 +1,6 @@
 #include "main.h"
+#include <string.h>
+#include <stddef.h>
 #include <stdlib.h>
 
 /**
@@ -10,20 +12,20 @@
  */
 char *_strdup(char *str)
 {
-    unsigned int i;
-    char *arrPtr;
+    unsigned int x;
+    char *ptr;
 
     if (str == NULL)
         return (NULL);
-    arrPtr = (char *)malloc(sizeof(char) * (strlen(str) + 1));
+    ptr = (char *)malloc(sizeof(char) * (strlen(str) + 1));
 
-    if (arrPtr == NULL)
+    if (ptr == NULL)
         return (NULL);
 
-    for (i = 0; i < strlen(str); i++)
+    for (x = 0; x < strlen(str); x++)
     {
-        arrPtr[i] = str[i];
+        ptr[x] = str[x];
     }
 
-    return (arrPtr);
+    return (ptr);
 }
