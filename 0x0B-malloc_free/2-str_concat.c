@@ -9,33 +9,39 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-    int len1, len2, len3;
-    int i;
-    char *arrChar;
-
-    if (s1 == NULL)
-        s1 = "";
-    if (s2 == NULL)
-        s2 = "";
+    unsigned int x, y;
+    char *ptr;
     
-    len1 = 0;
-    while (*(s1 + len1) != '\0')
-    {
-        len1++;
-    }
-    len2 = 0;
-    while (*(s2 + len2) != '\0')
-    {
-        len2++;
-    }
-    len3 = len1 + len2;
-    arrChar = (char*) malloc(len3 * sizeof(char) + 1);
-    if (arrChar == NULL)
-        return (NULL);
-    for (i = 0; i < len1; i++)
-        arrChar[i] = s1[i];
-    for (i = 0; i < len2; i++)
-        arrChar[i + len1] = s2[i];
+    x = 0;
+    y = 0;
 
-    return (arrChar);
+	if (s2 == NULL)
+		s2 = "";
+
+	if (s1 == NULL)
+		s1 = "";
+
+	while (s1[x] != '\0')
+		x++;
+
+	while (s2[y] != '\0')
+		y++;
+
+	ptr = (char *)malloc(sizeof(char) * (y + x + 1));
+
+	if (ptr == NULL)
+		return (NULL);
+
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
+
+	for (x = 0; s1[x] != '\0'; x++)
+		ptr[x] = s1[x];
+
+	for (y = 0; s2[y] != '\0'; y++)
+		ptr[x + y] = s2[y];
+
+	ptr[x + y + 1] = '\0';
+
+	return (ptr);
 }
