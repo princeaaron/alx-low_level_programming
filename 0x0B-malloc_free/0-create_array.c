@@ -12,22 +12,22 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	char *arrPtr;
+	char *ptr;
 	unsigned int x;
 
 	if (size == 0)
 		return (NULL);
 
-	arrPtr = (char *)malloc(sizeof(char) * size);
+	ptr = (char *)malloc(sizeof(char) * size);
 
-	if (arrPtr == NULL)
+	if (ptr == NULL)
 		return (NULL);
 
 	for (x = 0; x < size; x++)
 	{
-		arrPtr[x] = c;
+		ptr[x] = c;
 	}
 
-	arrPtr[++x] = '\0';
-	return (arrPtr);
+	ptr[++x] = '\0';
+	return (ptr);
 }
