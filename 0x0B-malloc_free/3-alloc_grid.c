@@ -9,7 +9,7 @@
  */
 int **alloc_grid(int width, int height)
 {
-    nt **ptr, x, y;
+    int **ptr, x, y;
 
 	if (width < 1 || height < 1)
 		return (NULL);
