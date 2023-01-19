@@ -10,19 +10,15 @@
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int x, res;
-
-	if (array == NULL || cmp == NULL)
+	int i;
+	i = -1;
+	
+	if (size <= 0 || !(array) || !(cmp))
 		return (-1);
-
-	if (size <= 0)
-		return (-1);
-
-	for (x = 0; x < size; x++)
+	while (++i < size)
 	{
-		res = cmp(array[x]);
-		if (res == 1)
-			return (x);
+		if (cmp(array[i]))
+			return (i);
 	}
 	return (-1);
 }
