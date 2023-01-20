@@ -11,7 +11,7 @@ void print_all(const char * const format, ...)
 	va_list vlst;
 	char *temp;
 	int x = 0;
-	
+
 	va_start(vlst, format);
 	while (format == NULL)
 	{
