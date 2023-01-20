@@ -41,9 +41,10 @@ void print_all(const char * const format, ...)
 				printf("(nil)");
 				break;
 		}
-		if ((format[x] == 'c' || format[x] == 'x' || format[i] == 'f' ||
+		if ((format[x] == 'c' || format[x] == 'x' || format[x] == 'f' ||
 		     format[x] == 's') && format[(x + 1)] != '\0')
-			printf(", ");x++;
+			printf(", ");
+		x++;
 	}
 	va_end(vlst);
 printf("\n");
