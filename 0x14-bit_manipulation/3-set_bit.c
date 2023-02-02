@@ -1,9 +1,9 @@
-#include "holberton.h"
+#include "main.h"
 /**
- * set_bit - Entry Point
- * @n: input
+ * set_bit - sets the value of a bit to 1 at a given index
+ * @n: integer
  * @index: index
- * Return: 0
+ * Return: integer
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
