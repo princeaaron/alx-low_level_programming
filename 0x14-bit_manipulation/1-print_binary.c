@@ -4,9 +4,7 @@
 #include <limits.h>
 /**
  * print_binary - print an unsigned int in binary
- *
- * @n:
- *
+ * @n: integer
  * Return: void
  */
 void print_binary(unsigned long int n)
